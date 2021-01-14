@@ -1,0 +1,36 @@
+.gridBody{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1rem));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: center;
+}
+.productsCard{
+    background-color: rgba(119, 102, 94, 0.863);
+    text-align: center;
+    height: 300px;
+    border-radius: 17px;
+    padding: 15px;
+    border: rgba(19, 18, 18, 0.473) 3px solid;
+
+}
+
+.link{
+    text-decoration: none;
+}
+.cardBody{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.coffeeTitle{
+    font: 1.5em sans-serif;
+}
+.coffeePrize{
+    margin: 20px 0;
+    font: 1.2em sans-serif;
+}
+.coffeeDiscription{
+text-overflow: clip;
+}

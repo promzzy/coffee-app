@@ -1,0 +1,67 @@
+.banner{
+	background: linear-gradient(rgba(100,34,78,0.3),rgba(34,100,200,0.4),rgba(200,100,34,0.2)), url(../../../../resources/1.jpg);
+	min-height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: flex-end;
+	font-family: Patrick Hand;
+}
+.bannerText{
+	font-family: Patrick Hand;
+	display: flex;
+	height: 200px;
+	width: 200px;
+	align-items: center;
+	justify-content: center;
+	background-color: #90465F;
+	text-transform: uppercase;
+	/*margin-right: 15%;*/
+	color: white;
+	font-size: 31px;
+}
+/* .banner-btn{
+	margin-right: 19.8%;
+} */
+.iconBg {
+	/* height: 50px;
+	width: 100px; */
+	/* border: 2px solid white; */
+    border-radius: 100%;
+    margin-left: 10px;
+    display: flex;
+    font-size: 40px;
+    color: rgba(61, 45, 45, 0.719);
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+
+}
+.bannerBtn{
+    background-color: rgba(73, 43, 43, 0.829);
+    height: 40px;
+    margin-top: 10px;
+    margin-right:  25px;
+	width: 110px;
+	color: #ffffff;
+	text-decoration: none;
+	border: 2px #90465F solid;
+    font-size: 17px;
+	align-self: center;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.break{
+    display: flex;
+}
+.bannercube{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 13%;
+}

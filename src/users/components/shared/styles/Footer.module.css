@@ -1,0 +1,75 @@
+footer{
+    color: white;
+    height: auto;
+     background-color: rgba(0,0,0,0.999);
+}
+
+.footerMenu{
+    display: flex;
+}
+
+.footerMenu div{
+	font-family: Patrick Hand;
+	flex: 1;
+}
+footer a{
+	font-family: Patrick Hand;
+	text-transform: uppercase;
+	font-size: 16px;
+
+}
+
+footer li{
+	margin-bottom: 12px;
+}
+.production-chain a{
+	color: white;
+}
+.feedback{
+	margin-top: 20px;
+	display: flex;
+}
+.iconBg{
+	color: white;
+	background-color: orange;
+	margin: 5px;
+}
+form{
+    text-align: center;
+}
+.formInput{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+}
+.formSubmitBtn{
+    margin: 25px 0;
+    font-size: medium;
+    width: 80px;
+    height: 35px;
+    border-radius: 9999px;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px){
+    .footerMenu h5{
+        font-size: 20px;
+    }
+    .footerMenu ul li{
+        font-weight: 15;
+        font-size: 12px;
+    }
+    .footerMenu ul li a{
+        font-weight: 15px;
+        font-size: 13px;
+    }
+    .footerMenu p{
+        font-size: 13px;
+    }
+    .footerForm form h3{
+        font-size: 17px;
+    }
+}

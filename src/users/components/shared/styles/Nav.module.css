@@ -1,0 +1,17 @@
+.nav{
+    background-color: #e0cfcffd;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  0 30px;
+}
+.navMenu{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.navMenu li{
+    margin: 0 15px;
+    list-style: none;
+}

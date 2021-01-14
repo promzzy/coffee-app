@@ -15,6 +15,7 @@ function handleChange(e){
 	setContactUs({...contactUs, [name]: value})
 }
 
+
     return(
             <>
             	<div className={styles.contactUs}>

@@ -84,7 +84,7 @@ console.log(handleFilter)
                 <div className={styles.prize}>
                             {
                                 coffees && coffees.filter(coffee => coffee.name === inputs.type).map(coffee =>(
-                                    <div className={styles.selectedPrize}>{`the prize for 1 cup of ${inputs.type} is ${coffee.prize}`}</div>
+                                    <div className={styles.selectedPrize}>{`the prize for 1 cup of ${inputs.type} is ₦${coffee.prize}`}</div>
                                 )) 
                             }
                 </div>
@@ -99,7 +99,7 @@ console.log(handleFilter)
                     <button className={styles.orderButton}>
                         {
                            priceInButton && priceInButton.length > 0 && inputs.quantity? (priceInButton && priceInButton.map(coffee =>(
-                        <span>{coffee.prize * inputs.quantity } </span>
+                        <span>{`₦${coffee.prize * inputs.quantity}`} </span>
                             )) 
     ) : (<span>Enter Order</span>)
                         }

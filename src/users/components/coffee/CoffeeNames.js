@@ -21,7 +21,7 @@ export default function CoffeeNames(){
                       	<div className={styles.productsCard}>
                           <div className={styles.cardBody}>
                               <h3 className={styles.coffeeTitle}>{coffee.name}</h3>
-                              <span className={styles.coffeePrize}>(NGN){coffee.prize}</span>
+                              <span className={styles.coffeePrize}> ₦{coffee.prize}</span>
                               <span className={styles.coffeeDiscription}>{coffee.discription}....</span>
                           </div>
                           <Link className={styles.link}  to={`/coffee/details/${coffee.id}`}>

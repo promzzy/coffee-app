@@ -17,7 +17,7 @@ export default function Banner(){
              <FontAwesomeIcon icon={faPlay} className={styles.iconBg} />
 		</div>
 		
-			<Link to="/order/createOder"  className={styles.bannerBtn} > order now </Link>
+			<Link to="/order/createOrder"  className={styles.bannerBtn} > order now </Link>
 	
 		</div>
 	</div>

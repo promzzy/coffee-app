@@ -17,11 +17,11 @@ function App() {
         <HomePage />
       </Route>
       
-      <Route exact path="/order/createOder">
+      <Route exact path={["/order/createOrder", "/order/createOrder/:id"]}>
         <CreateOrder />
       </Route>
 
-      <Route path="/coffee/details/:id">
+      <Route exact path="/coffee/details/:id">
       <CoffeeDetails />
       </Route>
 

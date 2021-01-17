@@ -18,8 +18,9 @@ function handleChange(e){
 
     return(
             <>
+			
             	<div className={styles.contactUs}>
-		<div>
+		<div className={styles.contactUsContainer}>
 		<h2>
 			WE LOVE TO HEAR FROM YOU
 		</h2>

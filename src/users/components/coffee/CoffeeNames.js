@@ -17,15 +17,18 @@ export default function CoffeeNames(){
                 coffees && coffees.length > 0 ? (<div className={styles.gridBody}>
                     {coffees.map((coffee) => (
 
-                        <Link className={styles.link}  to={`/coffee/details/${coffee.id}`}>
+                        
                       	<div className={styles.productsCard}>
                           <div className={styles.cardBody}>
                               <h3 className={styles.coffeeTitle}>{coffee.name}</h3>
                               <span className={styles.coffeePrize}>(NGN){coffee.prize}</span>
                               <span className={styles.coffeeDiscription}>{coffee.discription}....</span>
                           </div>
+                          <Link className={styles.link}  to={`/coffee/details/${coffee.id}`}>
+                              More Details...
+                          </Link>
                       </div>
-                      </Link>
+                      
                     ))}
                 </div>) : (<div>hello</div>)
             }

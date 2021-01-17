@@ -1,80 +1,112 @@
-import React, { useState} from 'react'
+import React, { useEffect, useState} from 'react'
 import styles from './styles/CreateOrderForm.module.css'
-import {
-    Form,
-    Input,
-    Button,
-    Select,
-    InputNumber,
-  } from 'antd';
+import {coffee} from '../../../data/coffees'
+import { useParams, useHistory } from 'react-router-dom'
+
+
 
 export default function CreateOrderForm(){
 
 
+const [coffees, setCoffees] = useState()
+const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    type: "",
+    quantity: "",
+    address: "",
+},)
+const { id } = useParams();
 
+const history = useHistory();
 
-  const [componentSize, setComponentSize] = useState('default');
+function handleGoBack(){
+    history.goBack()
+}
 
-  const onFormLayoutChange = ({ size }) => {
-    setComponentSize(size);
-  };
+const handleFilter = coffees && coffees.filter(coffee => coffee.id == id)
+const priceInButton = coffees && coffees.filter(coffee => coffee.name === inputs.type)
+
+console.log(priceInButton)
+
+console.log(handleFilter)
+
+  
+  useEffect(() => {
+      setCoffees(coffee)
+  },
+  [])
+
+   function handleChange(e){
+    const {name, value} = e.target
+    setInputs({...inputs, [name]: value})
+
+}
     return(
         <>
 
-        <div className={styles.OrderForm}>
-             <form
-             
-            >
-                <Form.Item
-                    label="Full name"
-                    name="name"
-                >
-                    <Input  size="large" name="name" />
-                </Form.Item>
-
-                <Form.Item
-                    label="Phone Number"
-                    name="phone"
-                >
-                    <Input type="phone" size="large"  name="phone" />
-                </Form.Item>
-
-                <Form.Item
-                    label="Email"
-                    name="email"
-                >
-                    <Input type="email" size="large"  name="email" />
-                </Form.Item>
-
-                <Form.Item
-                    label="Delivery Address"
-                    name="text"
-                >
-                    <Input type="email" size="large"  name="text" />
-                </Form.Item>
-
-                <Form.Item
-                    label="Quantity"
-                    name="quantity"
-                >
-                    <Input type="text"  size="large" name="quantity" />
-                </Form.Item>
-              
-                <Form.Item
-                    label="Coffee Type"
-                    name="type"
-                >
-                    <select name="type" className="ant-input ant-input-lg" size="large">
-                        <option value="">Select Coffee Type</option>
-                        {/* {
-                            departments && departments.map(department => (
-                                <option key={department.id} value={department.id}>{department.name}</option>
+        <div className={styles.orderbg}>
+            
+            <div className={styles.formContent}>
+                <div>
+            <button onClick={handleGoBack}>Go Back</button>
+            </div>
+                <h1 className={styles.orderHeader}>Place Your oder</h1>
+                <form>
+                    <div className={styles.formInputs}>
+                        <div>
+                            <input className={styles.input} onChange={handleChange} name="name" value={inputs.name} placeholder="Full Name" type="text" />
+                        </div>
+                        <div>
+                            <input type="email" onChange={handleChange} placeholder="Email Address" name="email" value={inputs.email} className={styles.input} />
+                        </div>
+                        <div>
+                            <input type="phone" onChange={handleChange} placeholder="Phone Number" name="mobile" value={inputs.mobile} className={styles.input} />
+                        </div>
+                        <div>
+                            <select className={styles.input} onChange={handleChange} name="type" value={inputs.type}>
+                            <option> Choose your Coffee Type</option>
+                                
+                    {
+                       handleFilter && handleFilter.length > 0 ? (handleFilter.map(coffee =>  (
+                           
+                            <option>{coffee.name}</option>
+                            
+                        ) ) ) : (
+                            coffees && coffees.map(coffee => (
+                                <option className={styles.selectOption}>{coffee.name}</option>
                             ))
-                        } */}
-                    </select>
-                </Form.Item>
-                <Button type="primary" size="large" htmlType="submit">Order</Button>
-            </form>
+                             )
+                    }
+                            </select>
+                        </div>
+                <div className={styles.prize}>
+                            {
+                                coffees && coffees.filter(coffee => coffee.name === inputs.type).map(coffee =>(
+                                    <div className={styles.selectedPrize}>{`the prize for 1 cup of ${inputs.type} is ${coffee.prize}`}</div>
+                                )) 
+                            }
+                </div>
+                    
+                        <div>
+                            <input type="number" onChange={handleChange} name="quantity" value={inputs.quantity} placeholder="How many Cup of coffee do you need" className={styles.input}/>
+                        </div>
+                        <div>
+                            <textarea type="text" onChange={handleChange} placeholder="Derivery Address" name="address" value={inputs.address} className={styles.input} />
+                        </div>
+                    </div>
+                    <button className={styles.orderButton}>
+                        {
+                           priceInButton && priceInButton.length > 0 && inputs.quantity? (priceInButton && priceInButton.map(coffee =>(
+                        <span>{coffee.prize * inputs.quantity } </span>
+                            )) 
+    ) : (<span>Enter Order</span>)
+                        }
+                        </button>
+                </form>
+            </div>
+            
 
             </div>
     </>

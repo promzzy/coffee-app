@@ -6,13 +6,14 @@ import {coffee} from '../../../data/coffees'
 export default function CoffeeDetails(){
 
     const {id} = useParams()
+    console.log(id)
 
     const history = useHistory()
 
    const [coffees, setCoffees] = useState([])
 
     useEffect(() => {
-        setCoffees(coffee)
+        setCoffees(coffee);
     },
     [])
 

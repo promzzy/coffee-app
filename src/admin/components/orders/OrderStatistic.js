@@ -4,8 +4,8 @@ import {order} from '../../../data/order'
 
 export default function Orderstatistic(){
     const [orders, setOrders] = useState([])
-    const [pendingOrders, setPendingOrders] = useState([])
-    const [deriveredOrder, setDeriveredOrders] = useState([])
+    // const [pendingOrders, setPendingOrders] = useState([])
+    // const [deriveredOrder, setDeriveredOrders] = useState([])
 
 
     useEffect(() => {
@@ -25,7 +25,7 @@ setOrders(order);
     return(
         <>
     <div className={styles.dashboard}>
-        <div className={styles.gridBox}>
+        {/* <div className={styles.gridBox}>
         <div className={styles.pendingOrderCard}>
             <span className={styles.cardHeader}>Pending Order</span>
             
@@ -56,7 +56,7 @@ setOrders(order);
            <span className={styles.cardHeader}> Total order </span>
            {pendingOrders && pendingOrders.length > 0 ? (
                 <>
-                <span className={styles.count}>{orders.length}</span>
+                <span className={styles.count}></span>
                 <p className={styles.cardText}>Total order Received</p>
                 </>
             ) : (
@@ -64,7 +64,7 @@ setOrders(order);
             )}
             
             </div>
-        </div>
+        </div> */}
     </div>
     </>
     )

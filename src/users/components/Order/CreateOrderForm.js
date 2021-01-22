@@ -8,7 +8,7 @@ import { useParams, useHistory } from 'react-router-dom'
 export default function CreateOrderForm(){
 
 
-const [coffees, setCoffees] = useState()
+const [coffees, setCoffees] = useState([])
 const [inputs, setInputs] = useState({
     name: "",
     email: "",
@@ -25,7 +25,7 @@ function handleGoBack(){
     history.goBack()
 }
 
-const handleFilter = coffees && coffees.filter(coffee => coffee.id == id)
+const handleFilter = coffees && coffees.filter(coffee => coffee.id === id)
 const priceInButton = coffees && coffees.filter(coffee => coffee.name === inputs.type)
 
 console.log(priceInButton)
@@ -66,7 +66,7 @@ console.log(handleFilter)
                         </div>
                         <div>
                             <select className={styles.input} onChange={handleChange} name="type" value={inputs.type}>
-                            <option> Choose your Coffee Type</option>
+                           
                                 
                     {
                        handleFilter && handleFilter.length > 0 ? (handleFilter.map(coffee =>  (
@@ -74,8 +74,12 @@ console.log(handleFilter)
                             <option>{coffee.name}</option>
                             
                         ) ) ) : (
+                            
                             coffees && coffees.map(coffee => (
-                                <option className={styles.selectOption}>{coffee.name}</option>
+                                <>
+                                <option> Choose your Coffee Type</option>
+                                <option className={styles.selectOption }>{coffee.name}</option>
+                                </>
                             ))
                              )
                     }

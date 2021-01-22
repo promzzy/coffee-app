@@ -1,0 +1,53 @@
+.sidebar {
+    background-color: var(--color-white);
+    height: 100vh;
+    box-shadow: 4px 0px 16px rgba(16, 30, 115, 0.08);
+    padding: 24px;
+  }
+  .logo {
+    width: 142px;
+    margin-bottom: 32px;
+  }
+  .menuHeader {
+    margin-bottom: 6px;
+    margin-top: 14px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: var(--color-neutral-gray);
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  .menuItem {
+    padding: 14px 0;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: var(--color-neutral-gray-dark);
+  }
+  .menuItem a {
+    color: var(--color-neutral-gray-dark);
+    text-decoration: none;
+  }
+  .menuIcon {
+    margin-right: 12px;
+  }
+  .menuActive {
+    color: var(--color-primary);
+  }
+  .menuActive a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  .menuItem a:hover {
+    color: var(--color-primary);
+  }
+  

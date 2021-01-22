@@ -1,0 +1,34 @@
+.gridBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-items: center;
+}
+.gridBox div{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 2px 2px 5px 5px #d3cfcf;
+}
+.pendingOrderCard, .deriverdOrderCard, .totalOrderCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardHeader{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.count{
+    font-size: 18px;
+    font-weight: bold;
+}
+.cardText{
+    font-style: italic;
+    font-size: 12px;
+}

@@ -9,7 +9,7 @@ export default function CoffeeDetails(){
 
     const history = useHistory()
 
-   const [coffees, setCoffees] = useState()
+   const [coffees, setCoffees] = useState([])
 
     useEffect(() => {
         setCoffees(coffee)
@@ -24,7 +24,7 @@ export default function CoffeeDetails(){
     return(
         <div className={styles.coffeeDetailsBanner}>
             {
-                coffees && coffees.filter(coffee => coffee.id == id ).map(coffee => (
+                coffees && coffees.filter(coffee => coffee.id === id ).map(coffee => (
                     <div className={styles.coffeeDetailsContent}>
                         
                 <button className={styles.goBackBtn} onClick={handleGoBack}>Go Back</button>

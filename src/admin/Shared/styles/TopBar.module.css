@@ -1,0 +1,26 @@
+.header {
+    height: 88px;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .searchInput {
+    width: 350px;
+    height: 40px;
+    background: var(--color-white);
+    border-radius: 100px;
+  }
+  .searchIcon {
+    color: var(--color-neutral-gray);
+  }
+  .notificationIcon {
+    color: var(--color-neutral-gray-light);
+    font-size: 24px;
+    line-height: 24px;
+    transform: rotate(25deg);
+  }
+  .avatar {
+    margin-left: 26px;
+  }
+  

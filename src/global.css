@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f6f8fb;
+  }
+  :root {
+    --color-white: #ffffff;
+    --color-neutral-gray: #a0a4a8;
+    --color-neutral-gray-dark: #52575c;
+    --color-primary: #336cfb;
+    --color-neutral-gray-light: #cacccf;
+    --color-neutral-black: #25282b;
+  }
+  

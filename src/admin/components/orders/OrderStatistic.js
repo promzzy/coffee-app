@@ -12,7 +12,7 @@ export default function Orderstatistic(){
 setOrders(order);
 filter();
     },
-    [filter])
+    [])
 
     function filter(){
         const derivered = orders && orders.filter( pendings => pendings.orderStatus === "derivered" )

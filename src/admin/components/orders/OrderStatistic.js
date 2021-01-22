@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles/OrderStatistic.module.css'
-import {order} from '../../../data/order'
 
 export default function Orderstatistic(){
     // const [orders, setOrders] = useState([])
@@ -22,6 +21,9 @@ export default function Orderstatistic(){
     return(
         <>
     <div className={styles.dashboard}>
+
+
+        hello
         {/* <div className={styles.gridBox}>
         <div className={styles.pendingOrderCard}>
             <span className={styles.cardHeader}>Pending Order</span>

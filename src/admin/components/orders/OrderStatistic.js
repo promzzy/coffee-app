@@ -10,17 +10,16 @@ export default function Orderstatistic(){
 
     useEffect(() => {
 setOrders(order);
-filter();
     },
     [])
 
-    function filter(){
+    
         const derivered = orders && orders.filter( pendings => pendings.orderStatus === "derivered" )
         setDeriveredOrders(derivered);
         
         const pending = orders && orders.filter( pendings => pendings.orderStatus !== "derivered" )
         setPendingOrders(pending)
-    }
+    
 
 
     return(

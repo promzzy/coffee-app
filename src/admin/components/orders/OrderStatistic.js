@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './styles/OrderStatistic.module.css'
 import {order} from '../../../data/order'
 
 export default function Orderstatistic(){
-    const [orders, setOrders] = useState([])
+    // const [orders, setOrders] = useState([])
     // const [pendingOrders, setPendingOrders] = useState([])
     // const [deriveredOrder, setDeriveredOrders] = useState([])
 
 
-    useEffect(() => {
-setOrders(order);
-    },
-    [])
+  
 
     // function filter(){
     //     const derivered = orders && orders.filter( pendings => pendings.orderStatus === "derivered" )

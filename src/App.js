@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import PageLayout from './users/components/layouts/PageLayout'
 import HomePage from './routes/userRoute/Index'
 import CreateOrder from './routes/userRoute/order/CreateOrder'

@@ -6,7 +6,7 @@ export default function Orderstatistic(){
     const [orders, setOrders] = useState([])
     const [pendingOrders, setPendingOrders] = useState([])
     const [deriveredOrder, setDeriveredOrders] = useState([])
-    const [waiting, setwaiting] = useState()
+
 
     useEffect(() => {
 setOrders(order);

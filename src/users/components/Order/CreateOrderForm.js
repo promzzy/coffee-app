@@ -66,7 +66,7 @@ console.log(handleFilter)
                         </div>
                         <div>
                             <select className={styles.input} onChange={handleChange} name="type" value={inputs.type}>
-                           
+                            <option> Choose your Coffee Type</option>
                                 
                     {
                        handleFilter && handleFilter.length > 0 ? (handleFilter.map(coffee =>  (
@@ -75,11 +75,10 @@ console.log(handleFilter)
                             
                         ) ) ) : (
                             
-                            coffees && coffees.map(coffee => (
-                                <>
-                                <option> Choose your Coffee Type</option>
+                        coffees && coffees.map(coffee => (
+                                
                                 <option className={styles.selectOption }>{coffee.name}</option>
-                                </>
+                                
                             ))
                              )
                     }

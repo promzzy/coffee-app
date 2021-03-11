@@ -6,6 +6,8 @@ footer{
 
 .footerMenu{
     display: flex;
+    flex-wrap: wrap;
+    flex: 1;
 }
 
 .footerMenu div{

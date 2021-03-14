@@ -6,7 +6,8 @@ export default function Nav(){
     return(
         <>
         <div className={styles.nav}>
-            <div>LOGO</div>
+            <div className={styles.logo1}>LOGO</div>
+            <div className={styles.logo2}>LG</div>
 
             <div>
                 <ul className={styles.navMenu}>

@@ -6,6 +6,9 @@
     justify-content: space-between;
     padding:  0 30px;
 }
+.logo2{
+    display: none;
+}
 .navMenu{
     display: flex;
     justify-content: space-around;
@@ -22,6 +25,12 @@
 @media (max-width: 780px){
     .navMenu li{
         font-size: 13px !important;
+    }
+    .logo1{
+        display: none;
+    }
+    .logo2{
+        display: block;
     }
 
 }

@@ -1,44 +1,46 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import PageLayout from './users/components/layouts/PageLayout'
-import HomePage from './routes/userRoute/Index'
-import CreateOrder from './routes/userRoute/order/CreateOrder'
-import CoffeeDetails from './routes/userRoute/coffee/CoffeeDetails'
-import Services from './routes/userRoute/services/Services'
-import About from './routes/userRoute/about/About'
-import ContactUs from './routes/userRoute/contactUs/ContactUs'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import PageLayout from './components/layouts/PageLayout'
+import HomePage from './route/Index'
+import CreateOrder from './route/order/CreateOrder'
+import CoffeeDetails from './route/coffee/CoffeeDetails'
+import Services from './route/services/Services'
+import About from './route/about/About'
+import ContactUs from './route/contactUs/ContactUs'
+
+
 function App() {
-
-
-
   return (
     <Router> 
       <PageLayout> 
+
         <Switch>
 
-        <Route>
-          <HomePage exact path="/" />
+        <Route exact path="/">
+          <HomePage />
         </Route>
 
-      <Route exact path={["/order/createOrder", "/order/createOrder/:id"]}>
+      <Route path={["/order/createOrder", "/order/createOrder/:id"]}>
         <CreateOrder />
       </Route>
 
-      <Route exact path="/coffee/details/:id">
+      <Route path="/coffee/details/:id">
       <CoffeeDetails />
       </Route>
 
-<Route  exact path="/services/services">
+<Route path="/services/services">
   <Services />
 </Route>
 
-<Route exact path="/about/aboutus">
+<Route path="/about/aboutus">
   <About />
 </Route>
 
-<Route exact path="/contact/contactUs">
+<Route path="/contact/contactUs">
   <ContactUs />
 </Route>
+
 </Switch>
+
 </PageLayout>
     </Router>
 

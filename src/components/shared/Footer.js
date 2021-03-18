@@ -1,6 +1,15 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import styles from './styles/Footer.module.css'
+import {Nav} from './NavData/Nav'
 export default function Footer(){
+
+	const [ navs, setNavs ] = useState([]);
+
+	useEffect(() => {
+		setNavs(Nav)
+	},[])
+
     return(
         <>
         <footer>
@@ -9,10 +18,13 @@ export default function Footer(){
 			<div>
 				<span class={styles.footerHeadings}>quick link</span>
 				<ul>
-					<li>home</li>
-					<li>about</li>
-					<li>services</li>
-					<li>contact</li>
+				{
+                        navs.map((nav) => (
+                            <Link to={nav.url}>
+                            <li>{nav.title}</li>
+                            </Link> 
+                        ))
+                    }
 				</ul>
 			</div>
 			<div>

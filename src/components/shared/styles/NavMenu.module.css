@@ -22,7 +22,12 @@
 
 
 
-@media (max-width: 780px){
+@media (max-width: 980px){
+
+.nav{
+    position: relative;
+}
+
     .navMenu li{
         font-size: 12px !important;
     }
@@ -32,5 +37,26 @@
     .logo2{
         display: block;
     }
+
+    .navMenu{
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.4s ease;
+    }
+
+    .navMenu.active{
+        background-color: brown;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+        text-align: center;
+    }
+
 
 }

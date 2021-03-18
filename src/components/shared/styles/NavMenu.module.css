@@ -17,8 +17,12 @@
 .navMenu li{
     margin: 0 15px;
     list-style: none;
+    color: white;
+    text-transform: capitalize;
 }
-
+.toggleBtn{
+    display: none;
+}
 
 
 
@@ -28,9 +32,9 @@
     position: relative;
 }
 
-    .navMenu li{
+    /* .navMenu li{
         font-size: 12px !important;
-    }
+    } */
     .logo1{
         display: none;
     }
@@ -50,7 +54,7 @@
     }
 
     .navMenu.active{
-        background-color: brown;
+        background-color: rgb(143, 96, 96);
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -58,5 +62,10 @@
         text-align: center;
     }
 
+    .toggleBtn{
+        display: block;
+        font-size: 30px;
+        transition: all 0.5s ease;
+    }
 
 }

@@ -6,23 +6,47 @@ footer{
 
 .footerMenu{
     display: flex;
-    flex-wrap: wrap;
-    flex: 1;
+    color: white;
+    justify-content: space-between;
+    padding: 30px;
+}
+.footerHeadings{
+    text-align: center;
+    margin: 25px 0;
+    color: whitesmoke;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.footerMenu div{
-	font-family: Patrick Hand;
-	flex: 1;
+.footerNav li{
+    list-style: none;
 }
-footer a{
-	font-family: Patrick Hand;
-	text-transform: uppercase;
-	font-size: 16px;
 
+.navLink{
+    color: white;
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+}
+.navLink:hover{
+    background: rgba(230, 228, 224, 0.398);
+    border-radius: 5px;
 }
 
 footer li{
-	margin-bottom: 12px;
+	margin-bottom: 10px;
+    list-style: none;
+    font-size: 16px;
+}
+.contactUs{
+    cursor: pointer;
+}
+.product{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 1rem;
+
 }
 .production-chain a{
 	color: white;

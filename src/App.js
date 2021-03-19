@@ -19,7 +19,7 @@ function App() {
           <HomePage />
         </Route>
 
-      <Route path={["/order/createOrder", "/order/createOrder/:id"]}>
+      <Route exact path={["/order/createOrder", "/order/createOrder/:id"]}>
         <CreateOrder />
       </Route>
 

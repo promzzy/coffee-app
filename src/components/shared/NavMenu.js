@@ -17,6 +17,9 @@ useEffect(() => {
 },
  [])
 
+ function clicked(){
+     toggle ? setToggle(!toggle) : setToggle(toggle)
+ }
 
     function handleToggle(){
         setToggle(!toggle)
@@ -45,9 +48,11 @@ console.log(toggle)
                 <ul className={ toggle ? `${styles.navMenu} ${styles.active}` : styles.navMenu}>
                     {
                         navs.map((nav) => (
-                            <Link to={nav.url}>
-                            <li>{nav.title}</li>
+                            <li onClick={clicked}>
+                            <Link className={styles[`${nav.classN}`]} to={nav.url}>
+                            {nav.title}
                             </Link> 
+                            </li>
                         ))
                     }
                 </ul>

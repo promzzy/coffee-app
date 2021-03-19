@@ -4,20 +4,20 @@ export const Nav = [
     {
         title: 'home',
         url: '/',
-        classN: ''
+        classN: 'navLink'
     },
     {
         title: 'About',
         url: '/about/aboutus',
-        classN: ''
+        classN: 'navLink'
     },  {
         title: 'Services',
         url: '/services/services',
-        classN: ''
+        classN: 'navLink'
     },
     {
         title: 'Contactme',
         url: '/contact/contactUs',
-        classN: ''
+        classN: 'navLink'
     }
 ]

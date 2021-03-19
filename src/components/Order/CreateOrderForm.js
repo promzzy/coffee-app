@@ -21,13 +21,16 @@ const { id } = useParams();
 
 const coffeeId = parseInt(id)
 
+console.log(id)
+
 const history = useHistory();
 
 function handleGoBack(){
     history.goBack()
 }
 
-const handleFilter = coffees && coffees.filter(coffee => coffee.id === coffeeId)
+const handleFilter  = coffees && coffees.filter(coffee => coffee.id === coffeeId);
+
 const priceInButton = coffees && coffees.filter(coffee => coffee.name === inputs.type)
 
 console.log(priceInButton)
@@ -68,21 +71,28 @@ console.log(handleFilter)
                         </div>
                         <div>
                             <select className={styles.input} onChange={handleChange} name="type" value={inputs.type}>
-                            <option> Choose your Coffee Type</option>
                                 
                     {
-                       handleFilter && handleFilter.length > 0 ? (handleFilter.map(coffee =>  (
+                       handleFilter && handleFilter.length > 0 ?
+                       
+                       (handleFilter.map(coffee =>  (
                            
                             <option selected>{coffee.name}</option>
                             
-                        ) ) ) : (
-                            
-                            coffees && coffees.map(coffee => (
-                                <>
+                        ) ) )
+                    
+                    :
+                     (   
+                         <>
+                        <option selected> Choose your Coffee Type</option>
+
+                            {coffees && coffees.map(coffee => (
                                 
+
                                 <option className={styles.selectOption }>{coffee.name}</option>
-                                </>
-                            ))
+                                
+                            ))}
+</>
                              )
                     }
                             </select>

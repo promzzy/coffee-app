@@ -83,7 +83,14 @@ form{
 @media (max-width: 768px){
   
     .footerMenu{
-        display: flex;
         flex-direction: column;
+        text-align: start;
+    }
+    .footerHeadings{
+        text-align: start;
+        font-size: 17px;
+    }
+    .footerMenu ul li {
+        margin: 0;
     }
 }

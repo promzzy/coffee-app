@@ -1,6 +1,7 @@
 footer{
     color: white;
     height: auto;
+    width: 100%;
      background-color: rgba(0,0,0,0.999);
 }
 
@@ -25,7 +26,6 @@ footer{
 
 .navLink{
     color: white;
-    font-size: 15px;
     padding: 0.5rem 1rem;
 }
 .navLink:hover{
@@ -63,6 +63,10 @@ footer li{
 form{
     text-align: center;
 }
+form .footerHeadings{
+    font-size: 13px;
+    text-align: center;
+}
 .formInput{
     width: 80%;
     height: 30px;
@@ -71,6 +75,8 @@ form{
 .formSubmitBtn{
     margin: 25px 0;
     font-size: medium;
+    color: wheat;
+    background: rgb(10, 72, 31);
     width: 80px;
     height: 35px;
     border-radius: 9999px;
@@ -84,13 +90,20 @@ form{
   
     .footerMenu{
         flex-direction: column;
-        text-align: start;
+        padding: 15px;
     }
     .footerHeadings{
         text-align: start;
         font-size: 17px;
+        margin-bottom: 5px;
     }
-    .footerMenu ul li {
+    .footerMenu div ul li {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 13px;
+    }
+    .footerMenu div ul{
         margin: 0;
+        padding: 0;
     }
 }

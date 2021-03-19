@@ -4,6 +4,10 @@ import styles from './styles/Footer.module.css'
 import {Nav} from './NavData/Nav'
 import { Contacts } from './NavData/Contacts'
 import {coffee} from '../../data/coffees'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { fa, faBars } from '@fortawesome/free-solid-svg-icons'
+
+
 export default function Footer(){
 
 	const [ navs, setNavs ] = useState([]);
@@ -11,6 +15,12 @@ export default function Footer(){
 	const [coffesProducts, setCoffeeProducts] = useState([])
 
 	const contactusClassN = contact.filter(filteredClassN => (filteredClassN.classN === `contactUs`))
+	
+	// const socialClassN = contact.filter(filteredClassN => (filteredClassN.classN === "social"))
+
+
+    // const socialClass = parseInt(socialClassN.icon)
+
 
 	useEffect(() => {
 		setNavs(Nav)
@@ -73,14 +83,14 @@ export default function Footer(){
 				<h5 class={styles.footerHeadings}>SOCIAL PLATFORMS</h5>
 				<div className={styles.socialPlatformIcon}>
 				<span className={styles.iconBg}>
-					
+					{
+						// socialClass.map(socialHandle => (
+						// 	<FontAwesomeIcon icon={socialHandle.icon} />
+						// ))
+					}
 				</span>
-				<span class={styles.iconBg}>
 				
-				</span>
-				<span className={styles.iconBg}>
-
-				</span>
+				
 				</div>
 			</div>
 		</div>
